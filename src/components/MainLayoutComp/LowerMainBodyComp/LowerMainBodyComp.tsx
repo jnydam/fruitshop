@@ -11,7 +11,11 @@ const LowerMainBodyComp: React.FC = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/allfruits")
+      .get(
+        process.env.REACT_APP_API_KEY
+          ? process.env.REACT_APP_API_KEY
+          : "http://localhost:8080/allfruits"
+      )
       .then((res) => {
         setFruitList(res.data);
       })
