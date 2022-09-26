@@ -12,19 +12,28 @@
   height: 100%;
   width: 24rem;
   background-color: beige;
+  align-items: center;
+  justify-content: center;
 }
 
 .checkoutButtonContainer {
   display: flex;
   width: 12rem;
   background-color: blueviolet;
+  align-items: center;
+  justify-content: center;
 }
 
 .headerButtonStyle {
   display: flex;
-  height: 80%;
-  width: 8rem;
+  height: 70%;
+  width: 10rem;
   background-color: aquamarine;
   border-style: none;
   outline-style: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: inherit;
 }

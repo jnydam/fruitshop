@@ -3,4 +3,34 @@
   flex: 10;
   width: 100%;
   background-color: green;
+  flex-direction: column;
+}
+
+.listGridViewTabContainer {
+  display: flex;
+  height: 3rem;
+  width: 100%;
+  background-color: beige;
+  align-items: center;
+}
+
+.listGridButtonStyle {
+  display: flex;
+  height: 80%;
+  width: 7rem;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  outline-style: none;
+  cursor: pointer;
+}
+
+.lowerFruitCardGridContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: grey;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }

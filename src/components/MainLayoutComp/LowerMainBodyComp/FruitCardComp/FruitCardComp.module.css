@@ -1,0 +1,57 @@
+.fruitCardCompContainer {
+  display: flex;
+  height: 15rem;
+  min-width: 15rem;
+  background-color: pink;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upperCardContainer {
+  display: flex;
+  height: 80%;
+  background-color: lightgreen;
+  flex-direction: column;
+  width: 100%;
+}
+.addToCartButtonStyle {
+  display: flex;
+  height: 2.7rem;
+  width: 70%;
+  background-color: brown;
+  border-style: none;
+  outline-style: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.fruitTitleContainer {
+  display: flex;
+  height: 2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+}
+
+.priceLabelContainer {
+  display: flex;
+  height: 2rem;
+  width: 100%;
+  background-color: blanchedalmond;
+  align-items: center;
+  justify-content: center;
+}
+
+.fruitImageContainer {
+  display: flex;
+  height: 5rem;
+  background-color: blueviolet;
+  justify-content: center;
+  width: 100%;
+}
