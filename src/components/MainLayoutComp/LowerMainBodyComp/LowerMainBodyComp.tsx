@@ -9,6 +9,43 @@ import Fruit from "../../../models/Fruit";
 const LowerMainBodyComp: React.FC = (props) => {
   const [fruitList, setFruitList] = useState<Fruit[]>([]);
 
+  const numRows = Math.ceil(fruitList.length / 5);
+
+  console.log(numRows);
+
+  const rowArray = Array.from(Array(2).keys());
+
+  console.log(rowArray);
+
+  const convertListDataToDoubleArray: (rawFruitList: Fruit[]) => Fruit[][] = (
+    rawFruitList
+  ) => {
+    const newDoubleFruitList: Fruit[][] = [];
+
+    rawFruitList.forEach((fruit, index) => {
+      const rowRemainder = Math.floor(index / 5);
+
+      let internalList: Fruit[];
+
+      if (newDoubleFruitList[rowRemainder] === undefined) {
+        internalList = [];
+        newDoubleFruitList[rowRemainder] = internalList;
+      } else {
+        internalList = newDoubleFruitList[rowRemainder];
+      }
+
+      internalList.push(fruit);
+    });
+
+    return newDoubleFruitList;
+  };
+
+  const finalDoubeList = convertListDataToDoubleArray(fruitList);
+
+  console.log("This is the final double list");
+
+  console.log(finalDoubeList);
+
   useEffect(() => {
     axios
       .get(
@@ -45,15 +82,63 @@ const LowerMainBodyComp: React.FC = (props) => {
         </button>
       </div>
       <div className={styles.lowerFruitCardGridContainer}>
-        {fruitList &&
-          fruitList.map((givenFruit, index) => (
-            <FruitCardComp
-              name={givenFruit.name}
-              price={givenFruit.price}
-              image={givenFruit.image}
-              key={index}
-            ></FruitCardComp>
-          ))}
+        {rowArray.map((_, index) => (
+          <div key={index} className={styles.fruitRowContainer}>
+            <div className={styles.fruitBlockDividerContainer}>
+              {finalDoubeList[index][0] && (
+                <FruitCardComp
+                  image={finalDoubeList[index][0].image}
+                  name={finalDoubeList[index][0].name}
+                  price={finalDoubeList[index][0].price}
+                ></FruitCardComp>
+              )}
+            </div>
+            <div className={styles.fruitBlockDividerContainer}>
+              {finalDoubeList[index][1] && (
+                <FruitCardComp
+                  image={finalDoubeList[index][1].image}
+                  name={finalDoubeList[index][1].name}
+                  price={finalDoubeList[index][1].price}
+                ></FruitCardComp>
+              )}
+            </div>
+            <div className={styles.fruitBlockDividerContainer}>
+              {finalDoubeList[index][2] && (
+                <FruitCardComp
+                  image={finalDoubeList[index][2].image}
+                  name={finalDoubeList[index][2].name}
+                  price={finalDoubeList[index][2].price}
+                ></FruitCardComp>
+              )}
+            </div>
+            <div className={styles.fruitBlockDividerContainer}>
+              {finalDoubeList[index][3] && (
+                <FruitCardComp
+                  image={finalDoubeList[index][3].image}
+                  name={finalDoubeList[index][3].name}
+                  price={finalDoubeList[index][3].price}
+                ></FruitCardComp>
+              )}
+            </div>
+            <div className={styles.fruitBlockDividerContainer}>
+              {finalDoubeList[index][4] && (
+                <FruitCardComp
+                  image={finalDoubeList[index][4].image}
+                  name={finalDoubeList[index][4].name}
+                  price={finalDoubeList[index][4].price}
+                ></FruitCardComp>
+              )}
+            </div>
+            {/* {finalDoubeList[index].map((fruitEntry, index) => (
+              <FruitCardComp
+                name={fruitEntry.name}
+                price={fruitEntry.price}
+                image={fruitEntry.image}
+                key={index}
+              ></FruitCardComp>
+            ))} */}
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 .fruitCardCompContainer {
   display: flex;
   height: 15rem;
-  min-width: 15rem;
+  min-width: 14rem;
   background-color: #ffd8a9;
   margin-left: 1rem;
   border-radius: 0.5rem;
