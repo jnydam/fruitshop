@@ -1,0 +1,30 @@
+.innerHeaderCompContainer {
+  display: flex;
+  height: 70%;
+  width: 90%;
+  background-color: lightblue;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+}
+
+.leftSideContainer {
+  display: flex;
+  height: 100%;
+  width: 24rem;
+  background-color: beige;
+}
+
+.checkoutButtonContainer {
+  display: flex;
+  width: 12rem;
+  background-color: blueviolet;
+}
+
+.headerButtonStyle {
+  display: flex;
+  height: 80%;
+  width: 8rem;
+  background-color: aquamarine;
+  border-style: none;
+  outline-style: none;
+}

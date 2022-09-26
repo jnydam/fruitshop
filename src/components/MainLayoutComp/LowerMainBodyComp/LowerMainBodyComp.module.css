@@ -1,0 +1,6 @@
+.lowerMainBodyCompContainer {
+  display: flex;
+  flex: 10;
+  width: 100%;
+  background-color: green;
+}

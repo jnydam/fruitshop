@@ -1,0 +1,8 @@
+.upperFruitHeaderCompContainer {
+  display: flex;
+  width: 100%;
+  min-height: 6rem;
+  background-color: pink;
+  align-items: center;
+  justify-content: center;
+}
