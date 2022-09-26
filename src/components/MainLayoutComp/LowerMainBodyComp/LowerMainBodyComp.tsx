@@ -13,7 +13,7 @@ import ListViewDisplayComp from "./ListViewDisplayComp/ListViewDisplayComp";
 const LowerMainBodyComp: React.FC = (props) => {
   const [fruitList, setFruitList] = useState<Fruit[]>([]);
   const [dataLoaded, setDataLoaded] = useState<Boolean>(false);
-  const [currentTab, setCurrentTab] = useState<string>("list");
+  const [currentTab, setCurrentTab] = useState<string>("grid");
 
   const numRowsFiveGrid = Math.ceil(fruitList.length / 5);
   const numRowsFourGrid = Math.ceil(fruitList.length / 4);
