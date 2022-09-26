@@ -7,6 +7,7 @@
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   flex-direction: column;
+  box-shadow: 0px 1px 3px grey;
   align-items: center;
 }
 
@@ -19,8 +20,7 @@
 }
 .addToCartButtonStyle {
   display: flex;
-  height: 2.7rem;
-  max-height: 2.7rem;
+  min-height: 2.7rem;
   width: 70%;
   background-color: brown;
   border-style: none;

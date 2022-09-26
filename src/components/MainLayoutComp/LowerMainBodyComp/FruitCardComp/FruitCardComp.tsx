@@ -15,6 +15,7 @@ const FruitCardComp: React.FC = (props) => {
           <img
             alt="lemon white"
             style={{
+              borderRadius: "0.2rem",
               height: "100%",
             }}
             src={lemonPicWhite}

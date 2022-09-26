@@ -7,8 +7,24 @@ const LowerMainBodyComp: React.FC = (props) => {
   return (
     <div className={styles.lowerMainBodyCompContainer}>
       <div className={styles.listGridViewTabContainer}>
-        <button className={styles.listGridButtonStyle}>List View</button>
-        <button className={styles.listGridButtonStyle}>Grid View</button>
+        <button
+          style={{
+            boxShadow: "0px 1px 3px grey",
+            marginLeft: "1rem",
+          }}
+          className={styles.listGridButtonStyle}
+        >
+          List View
+        </button>
+        <button
+          style={{
+            boxShadow: "0px 1px 3px grey",
+            marginLeft: "1rem",
+          }}
+          className={styles.listGridButtonStyle}
+        >
+          Grid View
+        </button>
       </div>
       <div className={styles.lowerFruitCardGridContainer}>
         <FruitCardComp></FruitCardComp>
