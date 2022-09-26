@@ -13,6 +13,7 @@ const FruitCardComp: React.FC = (props) => {
         </div>
         <div className={styles.fruitImageContainer}>
           <img
+            alt="lemon white"
             style={{
               height: "100%",
             }}
@@ -23,9 +24,11 @@ const FruitCardComp: React.FC = (props) => {
           <span>Price: $3.99</span>
         </div>
       </div>
-      <button className={styles.addToCartButtonStyle}>
-        <span>Add To Cart</span>
-      </button>
+      <div className={styles.lowerButtonContainer}>
+        <button className={styles.addToCartButtonStyle}>
+          <span>Add To Cart</span>
+        </button>
+      </div>
     </div>
   );
 };

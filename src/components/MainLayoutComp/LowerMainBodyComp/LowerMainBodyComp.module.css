@@ -2,15 +2,16 @@
   display: flex;
   flex: 10;
   width: 100%;
-  background-color: green;
+  /* background-color: green; */
   flex-direction: column;
+  align-items: center;
 }
 
 .listGridViewTabContainer {
   display: flex;
   height: 3rem;
-  width: 100%;
-  background-color: beige;
+  width: 90%;
+  /* background-color: beige; */
   align-items: center;
 }
 
@@ -22,14 +23,16 @@
   justify-content: center;
   border-style: none;
   outline-style: none;
+  background-color: #ffecd5;
   cursor: pointer;
 }
 
 .lowerFruitCardGridContainer {
   display: flex;
   height: 100%;
-  width: 100%;
-  background-color: grey;
+  width: 90%;
+  padding-top: 1rem;
+  background-color: white;
   justify-content: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;

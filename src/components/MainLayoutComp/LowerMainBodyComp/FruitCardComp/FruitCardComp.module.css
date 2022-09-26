@@ -2,7 +2,7 @@
   display: flex;
   height: 15rem;
   min-width: 15rem;
-  background-color: pink;
+  background-color: #ffd8a9;
   margin-left: 1rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
@@ -13,13 +13,14 @@
 .upperCardContainer {
   display: flex;
   height: 80%;
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   flex-direction: column;
   width: 100%;
 }
 .addToCartButtonStyle {
   display: flex;
   height: 2.7rem;
+  max-height: 2.7rem;
   width: 70%;
   background-color: brown;
   border-style: none;
@@ -28,6 +29,7 @@
   justify-content: center;
   font-size: 0.9rem;
   color: white;
+  cursor: pointer;
 }
 
 .fruitTitleContainer {
@@ -36,14 +38,23 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-color: orange;
+  /* background-color: orange; */
 }
 
 .priceLabelContainer {
   display: flex;
   height: 2rem;
   width: 100%;
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
+  align-items: center;
+  justify-content: center;
+}
+
+.lowerButtonContainer {
+  display: flex;
+  min-height: 4rem;
+  width: 100%;
+  /* background-color: green; */
   align-items: center;
   justify-content: center;
 }
@@ -51,7 +62,7 @@
 .fruitImageContainer {
   display: flex;
   height: 5rem;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   justify-content: center;
   width: 100%;
 }
