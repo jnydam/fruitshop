@@ -1,0 +1,10 @@
+.listViewDisplayCompContainer {
+  display: flex;
+  height: 40rem;
+  width: 90%;
+  padding-top: 1rem;
+  /* background-color: lightgreen; */
+  flex-direction: column;
+  overflow: auto;
+  align-items: center;
+}

@@ -7,10 +7,13 @@ import axios from "axios";
 import Fruit from "../../../models/Fruit";
 import FiveRowFruitGridContainer from "./FiveRowFruitGridContainer/FiveRowFruitGridContainer";
 import FourRowFruitGridContainer from "./FourRowFruitGridContainer/FourRowFruitGridContainer";
+import GridViewDisplayComp from "./GridViewDisplayComp/GridViewDisplayComp";
+import ListViewDisplayComp from "./ListViewDisplayComp/ListViewDisplayComp";
 
 const LowerMainBodyComp: React.FC = (props) => {
   const [fruitList, setFruitList] = useState<Fruit[]>([]);
   const [dataLoaded, setDataLoaded] = useState<Boolean>(false);
+  const [currentTab, setCurrentTab] = useState<string>("list");
 
   const numRowsFiveGrid = Math.ceil(fruitList.length / 5);
   const numRowsFourGrid = Math.ceil(fruitList.length / 4);
@@ -46,14 +49,6 @@ const LowerMainBodyComp: React.FC = (props) => {
 
   const finalFourListDisplay = convertListDataToDoubleArray(fruitList, 4);
 
-  console.log("This is the final double list");
-
-  console.log(finalDoubeList);
-
-  console.log("But this is the 4 list version");
-
-  console.log(finalFourListDisplay);
-
   useEffect(() => {
     axios
       .get(
@@ -68,11 +63,16 @@ const LowerMainBodyComp: React.FC = (props) => {
       .catch((err) => {});
   }, []);
 
+  const handleGridListViewChange = (tabType: string) => {
+    setCurrentTab(tabType);
+  };
+
   return (
     dataLoaded && (
       <div className={styles.lowerMainBodyCompContainer}>
         <div className={styles.listGridViewTabContainer}>
           <button
+            onClick={() => handleGridListViewChange("list")}
             style={{
               boxShadow: "0px 1px 3px grey",
               marginLeft: "1rem",
@@ -82,6 +82,7 @@ const LowerMainBodyComp: React.FC = (props) => {
             List View
           </button>
           <button
+            onClick={() => handleGridListViewChange("grid")}
             style={{
               boxShadow: "0px 1px 3px grey",
               marginLeft: "1rem",
@@ -91,14 +92,16 @@ const LowerMainBodyComp: React.FC = (props) => {
             Grid View
           </button>
         </div>
-        <FiveRowFruitGridContainer
-          finalDoubeList={finalDoubeList}
-          rowArray={rowArrayFiveGrid}
-        ></FiveRowFruitGridContainer>
-        <FourRowFruitGridContainer
-          finalDoubeList={finalFourListDisplay}
-          rowArray={rowArrayFourGrid}
-        ></FourRowFruitGridContainer>
+        {currentTab === "grid" ? (
+          <GridViewDisplayComp
+            rowArrayFourGrid={rowArrayFourGrid}
+            finalDoubeList={finalDoubeList}
+            finalFourListDisplay={finalFourListDisplay}
+            rowArrayFiveGrid={rowArrayFiveGrid}
+          ></GridViewDisplayComp>
+        ) : (
+          <ListViewDisplayComp fruitData={fruitList}></ListViewDisplayComp>
+        )}
       </div>
     )
   );

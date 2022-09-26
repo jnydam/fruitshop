@@ -1,0 +1,57 @@
+.listEntryHorizCompContainer {
+  display: flex;
+  min-height: 6rem;
+  width: 98%;
+  background-color: #ffd8a9;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 3px grey;
+}
+
+.leftSideContainer {
+  display: flex;
+  height: 100%;
+  width: 25rem;
+  /* background-color: orange; */
+}
+
+.imageContainer {
+  display: flex;
+  height: 100%;
+  width: 15rem;
+  /* background-color: purple; */
+  align-items: center;
+  justify-content: center;
+}
+
+.rightSideAddCartContainer {
+  display: flex;
+  height: 100%;
+  width: 15rem;
+  /* background-color: aqua; */
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.addToCartButtonStyle {
+  display: flex;
+  min-height: 2.7rem;
+  width: 40%;
+  background-color: brown;
+  border-style: none;
+  outline-style: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  margin-right: 1rem;
+}
+
+.nameContainer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}

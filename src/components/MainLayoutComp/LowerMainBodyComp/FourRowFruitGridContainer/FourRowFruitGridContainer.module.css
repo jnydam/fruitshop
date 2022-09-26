@@ -1,7 +1,7 @@
 @media only screen and (max-width: 1350px) {
   .lowerFruitCardGridContainer {
     display: flex;
-    min-height: 40rem;
+    min-height: 33rem;
     width: 90%;
     padding-top: 1rem;
     /* background-color: white; */
@@ -14,7 +14,7 @@
 .fruitRowContainer {
   display: flex;
   height: 16rem;
-  background-color: pink;
+  /* background-color: pink; */
   width: 100%;
 }
 
@@ -22,7 +22,7 @@
   display: flex;
   height: 100%;
   flex: 2;
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
 }
 
 @media only screen and (min-width: 1350px) {

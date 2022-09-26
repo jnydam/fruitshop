@@ -21,6 +21,7 @@ const FruitCardComp: React.FC<FruitCardCompProps> = (props) => {
             style={{
               borderRadius: "0.2rem",
               height: "100%",
+              boxShadow: "0px 1px 3px grey",
             }}
             src={require(`../../../../assets/${props.image}.jpeg`)}
           ></img>
